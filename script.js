@@ -1,4 +1,3 @@
-// 等待页面加载完成
 $(document).ready(function() {
     // 定义常量和变量
     var API_HOST = 'http://localhost:8080';
