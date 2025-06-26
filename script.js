@@ -2,7 +2,7 @@
 $(document).ready(function() {
     // 定义常量和变量
     var API_HOST = 'http://localhost:8080';
-    var PAGE_SIZE = 5;
+    var PAGE_SIZE = 3;
     var currentPage = 1;
     var totalComments = 0;
 

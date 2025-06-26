@@ -9,7 +9,7 @@ import (
 	"sync"
 )
 
-// Comment 定义了评论的数据结构
+// Comment 定义评论的数据结构
 type Comment struct {
 	ID      int    `json:"id"`
 	Name    string `json:"name"`
@@ -23,24 +23,25 @@ var (
 	incrementID = 0
 )
 
-// Response 是统一的API响应结构
+// Response 统一的API响应结构
 type Response struct {
 	Code int         `json:"code"`
 	Msg  string      `json:"msg"`
 	Data interface{} `json:"data"`
 }
 
-// GetCommentsResponse 是获取评论列表的特定响应数据结构
+// GetCommentsResponse 获取评论列表的特定响应数据结构
 type GetCommentsResponse struct {
 	Total    int       `json:"total"`
 	Comments []Comment `json:"comments"`
 }
 
 func main() {
-	// 添加一些初始数据方便测试
+	// 初始化数据
 	comments = append(comments, Comment{ID: 1, Name: "User1", Content: "This is the first comment!"})
 	comments = append(comments, Comment{ID: 2, Name: "User2", Content: "Hello World!"})
-	incrementID = 2
+	comments = append(comments, Comment{ID: 2, Name: "User2", Content: "我想放假www"})
+	incrementID = 3
 
 	http.HandleFunc("/comment/get", getCommentsHandler)
 	http.HandleFunc("/comment/add", addCommentHandler)
