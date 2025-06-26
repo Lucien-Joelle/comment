@@ -16,7 +16,7 @@ type Comment struct {
 	Content string `json:"content"`
 }
 
-// 模拟数据库
+// 模拟的数据库
 var (
 	mutex       = &sync.RWMutex{}
 	comments    = make([]Comment, 0)
