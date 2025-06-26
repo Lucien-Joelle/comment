@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <!--html头部信息的含义请自行学习-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>xxxxx</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="comment-box">
+      <h3>user name</h3>
+      <input type="text" class="name-input" />
+      <h3>comment content</h3>
+      <input type="text" class="content-input" />
+      <button class="submit-button">提交</button>
+    </div>
+
+    <ul class="comment-list">
+      <!-- 评论将由JavaScript动态加载到这里 -->
+    </ul>
+
+    <div class="pagination">
+      <button id="prev-page">上一页</button>
+      <button id="next-page">下一页</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
